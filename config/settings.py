@@ -125,3 +125,11 @@ STATIC_URL = 'static/'
 
 CORS_ALLOW_ALL_ORIGINS = True
 
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent  # si ya lo tienes, NO lo dupliques
+
+STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+
